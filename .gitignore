@@ -1,7 +1,4 @@
-chipotle.tsv
-occupation.user
-student.csv
-food.tsv
-population.csv
-time_data_analyzed.csv
-timesData.csv
+*.csv
+*.tsv
+*.txt
+.DS_Store

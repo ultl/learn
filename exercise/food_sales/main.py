@@ -1,6 +1,4 @@
 import pandas as pd
-from plotly.graph_objects import Bar, Scatter
-from streamlit import plotly_chart
 
 # heading
 # convert from tsv to csv
@@ -50,12 +48,3 @@ veggie = df.item_name[df.item_name.str.contains('Veggie Salad Bowl')].count()
 # How many times did someone order more than one Canned Soda?
 soda = df[df.item_name == 'Canned Soda']
 over_one_soda = soda[soda.quantity > 1].count()
-
-# top 5 items bought
-top_5 = df.groupby('item_name').sum().sort_values('quantity', ascending=False).head(5)
-fig = Bar(y=top_5['quantity'].values, x=top_5.index, orientation='v')
-plotly_chart(figure_or_data=dict(data=fig))
-
-dt = df[['item_name', 'item_price']].drop_duplicates().sort_values('item_price', ascending=False)
-fig = Scatter(y=dt['item_name'], x=dt['item_price'], mode='markers')
-plotly_chart(figure_or_data=dict(data=fig))
