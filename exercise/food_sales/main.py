@@ -2,7 +2,8 @@ import pandas as pd
 
 # heading
 # convert from tsv to csv
-df = pd.read_csv('chipotle.tsv', sep='\t')
+df = pd.read_csv('food_sales.csv')
+
 print('observations:', df.shape[0])
 print('columns number:', df.shape[1])
 print('columns:', df.columns.to_list())
