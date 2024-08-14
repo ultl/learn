@@ -28,5 +28,3 @@ df = df.rename(
     'G3': 'grade_3',
   }
 )
-df.to_csv('cleaned_student.csv', index=False)
-df.to_parquet('food.parquet')

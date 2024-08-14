@@ -1,12 +1,12 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('occupation.user', sep='|')
+df = pd.read_csv('occupation.txt')
 # the mean age per occupation
 occupation = df[['occupation', 'age']].groupby('occupation').mean().round(2)
 
 # For each occupation, calculate the minimum and maximum ages
-range = df.groupby('occupation').agg({'age': ['min', 'max', 'count', 'sum', 'mean']})
+analysis = df.groupby('occupation').agg({'age': ['min', 'max', 'count', 'sum', 'mean']})
 
 
 # The Male ratio per occupation and sort it from the most to the least
