@@ -1,13 +1,11 @@
 import pandas as pd
 
-# heading
-# convert from tsv to csv
-df = pd.read_csv('food_sales.csv')
+df = pd.read_csv('clean_food_sales.csv')
 
-print('observations:', df.shape[0])
-print('columns number:', df.shape[1])
-print('columns:', df.columns.to_list())
-print('indexing:', df.index)
+'rows', df.shape[0]
+'columns', df.shape[1]
+'column names', df.columns.to_list()
+'describe',df.describe()
 
 # the most ordered item in the chipotle dataset based on item name:
 most_ordered = df.groupby('item_name').sum().sort_values(['quantity'], ascending=False).head(1)
@@ -49,3 +47,7 @@ veggie = df.item_name[df.item_name.str.contains('Veggie Salad Bowl')].count()
 # How many times did someone order more than one Canned Soda?
 soda = df[df.item_name == 'Canned Soda']
 over_one_soda = soda[soda.quantity > 1].count()
+
+# Data cleaning and transformation
+"order_id => nominal"
+"price => float"

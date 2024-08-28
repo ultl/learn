@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "astype",
     "bargap",
     "barmode",
     "bordercolor",
@@ -7,6 +8,7 @@
     "crosstab",
     "dataframe",
     "despacito",
+    "dropna",
     "heapmap",
     "idxmax",
     "iloc",
