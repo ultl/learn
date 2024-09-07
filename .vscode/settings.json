@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "anova",
     "astype",
     "bargap",
     "barmode",
@@ -16,6 +17,7 @@
     "quantile",
     "snakecase",
     "splom",
+    "statsmodels",
     "streamlit",
     "ticklen",
     "trendline",
